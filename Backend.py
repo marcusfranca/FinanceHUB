@@ -78,12 +78,12 @@ def listar_dados_financeiros_sma_hight():
     return jsonify(data)
 @app.route('/dados_financeiros_SMA_low', methods=['GET'])
 def listar_dados_financeiros_sma_low():
-    response = requests.get(SMA.base_url_sma, params=SMA.params_sma_hight)
+    response = requests.get(SMA.base_url_sma, params=SMA.params_sma_low)
     data = response.json()
     return jsonify(data)
 @app.route('/dados_financeiros_SMA_close', methods=['GET'])
 def listar_dados_financeiros_sma_close():
-    response = requests.get(SMA.base_url_sma, params=SMA.params_sma_hight)
+    response = requests.get(SMA.base_url_sma, params=SMA.params_sma_close)
     data = response.json()
     return jsonify(data)
 
